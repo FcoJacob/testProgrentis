@@ -10,18 +10,18 @@
 </template>
 
 <style lang="scss">
-  $background-home: #b9b9b9;
+$background-home: #b9b9b9;
 
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
+::-webkit-scrollbar {
+  width: 0px;
+}
 
-  #app {
-    font-family: "Montserrat", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    background: $background-home;
-    color: #2c3e50;
-  }
+#app {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background: $background-home;
+  color: #2c3e50;
+}
 </style>

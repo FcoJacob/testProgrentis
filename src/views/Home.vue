@@ -7,11 +7,11 @@
 </template>
 
 <script>
-  export default {
-    name: "Home",
-    components: {
-      CompleteSecuence: () => import("@/components/CompleteSecuence"),
-    },
-    data: () => ({}),
-  };
+export default {
+  name: "Home",
+  components: {
+    CompleteSecuence: () => import("@/components/CompleteSecuence")
+  },
+  data: () => ({})
+};
 </script>
