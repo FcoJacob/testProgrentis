@@ -6,5 +6,6 @@ module.exports = {
     manifestOptions: {
       background_color: "#FFF7F7"
     }
-  }
+  },
+  transpileDependencies: ["vuetify"]
 };

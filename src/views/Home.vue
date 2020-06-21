@@ -1,13 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <h1>Welcome to test!</h1>
-    <h4>Ready!</h4>
-  </div>
+  <v-row no-gutters class="fill-height" align="center" justify="center">
+    <v-col>
+      <complete-secuence />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-export default {
-  name: "Home"
-};
+  export default {
+    name: "Home",
+    components: {
+      CompleteSecuence: () => import("@/components/CompleteSecuence"),
+    },
+    data: () => ({}),
+  };
 </script>
