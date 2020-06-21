@@ -158,8 +158,9 @@
                             class="check"
                           >
                             <v-row align="center" justify="center">
-                              <v-col cols="12" class="mx-auto">
+                              <v-col cols="12">
                                 <v-img
+                                  width="100%"
                                   height="100%"
                                   :src="
                                     require('@/assets/resourceImg/Check.svg')
@@ -188,7 +189,7 @@
                   </v-col>
                   <v-col
                     v-show="
-                      !$vuetify.breakpoint.mdAndDown ||
+                      !$vuetify.breakpoint.mdAndDown &&
                         index < arraySecuence.length - 1
                     "
                     cols="2"
@@ -382,10 +383,14 @@ export default {
       if (checkResult === "boxSuccess") {
         this.numberHits = this.numberHits + 1;
         clearTimeout(this.timeForQuestion);
-        this.setArraySecuenceRandom();
+        setTimeout(() => {
+          this.setArraySecuenceRandom();
+        }, 2000);
       } else {
         clearTimeout(this.timeForQuestion);
-        this.setArraySecuenceRandom();
+        setTimeout(() => {
+          this.setArraySecuenceRandom();
+        }, 2000);
       }
     }
   }
