@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.bd1dc752dccf53796b317465e25bedaf.js"
+  "/precache-manifest.95c042883dd41548802a8d1363202e5e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "progrentis"});
