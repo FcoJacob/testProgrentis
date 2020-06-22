@@ -42,46 +42,47 @@
                   <v-col cols="10" md="8">
                     <v-row align="start" justify="center">
                       <v-col style="position: relative;">
-                        <div
-                          :class="
-                            $vuetify.breakpoint.mdAndDown
-                              ? `boxMobile ${checkValue}`
-                              : `box ${checkValue}`
-                          "
-                          v-if="value === ' '"
-                        >
+                        <div v-if="value === ' '">
                           <a
                             @click="dialog = true"
                             style="text-decoration: none; color: black;"
                           >
-                            <template>
-                              <v-container
-                                :class="
-                                  $vuetify.breakpoint.mdAndDown
-                                    ? 'pa-0'
-                                    : 'fill-height pa-0'
-                                "
-                                fluid
-                              >
-                                <v-row
-                                  align="center"
-                                  justify="center"
-                                  no-gutters
+                            <div
+                              :class="
+                                $vuetify.breakpoint.mdAndDown
+                                  ? `boxMobile ${checkValue}`
+                                  : `box ${checkValue}`
+                              "
+                            >
+                              <template>
+                                <v-container
+                                  :class="
+                                    $vuetify.breakpoint.mdAndDown
+                                      ? 'pa-0'
+                                      : 'fill-height pa-0'
+                                  "
+                                  fluid
                                 >
-                                  <v-col>
-                                    <h2
-                                      :class="
-                                        $vuetify.breakpoint.mdAndDown
-                                          ? 'body-1 font-weight-medium'
-                                          : 'text-h2 font-weight-medium'
-                                      "
-                                    >
-                                      {{ valueSelected }}
-                                    </h2>
-                                  </v-col>
-                                </v-row>
-                              </v-container>
-                            </template>
+                                  <v-row
+                                    align="center"
+                                    justify="center"
+                                    no-gutters
+                                  >
+                                    <v-col>
+                                      <h2
+                                        :class="
+                                          $vuetify.breakpoint.mdAndDown
+                                            ? 'body-1 font-weight-medium'
+                                            : 'text-h2 font-weight-medium'
+                                        "
+                                      >
+                                        {{ valueSelected }}
+                                      </h2>
+                                    </v-col>
+                                  </v-row>
+                                </v-container>
+                              </template>
+                            </div>
                           </a>
                         </div>
                         <div
@@ -157,25 +158,20 @@
                             v-if="checkValue === 'boxSuccess'"
                             class="check"
                           >
-                            <v-row align="center" justify="center">
-                              <v-col cols="12">
-                                <v-img
-                                  width="100%"
-                                  height="100%"
-                                  :src="
-                                    require('@/assets/resourceImg/Check.svg')
-                                  "
-                                  contain
-                                />
-                              </v-col>
-                            </v-row>
+                            <v-img
+                              width="100%"
+                              height="100%"
+                              :src="require('@/assets/resourceImg/Check.svg')"
+                              contain
+                              style="margin-left: 100% !important;"
+                            />
                           </v-col>
                           <v-col
                             v-else-if="checkValue === 'boxError'"
                             class="check"
                           >
                             <h6
-                              class="text-h6 font-weight-bold text-left"
+                              class="text-h6 font-weight-bold text-center"
                               style="color: #B60006;"
                             >
                               La respuesta correcta es
